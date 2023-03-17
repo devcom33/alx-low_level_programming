@@ -9,9 +9,13 @@ int main(void)
 {
 	int i;
 
-	for (i = 0; i <= 15; i++)
+	for (i = 0; i < 10; i++)
 	{
 		putchar((i % 16) + '0');
+	}
+	for (letter = 'a'; letter <= 'z'; letter++)
+	{
+		putchar(letter);
 	}
 	putchar('\n');
 	return (0);
