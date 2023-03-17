@@ -15,20 +15,20 @@ int main(void)
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	/* your code goes there */
-	if (n > 5)
+	if (n > 0)
 	{
-		printf("and is greater than 5\n");
+		printf("%d is positive\n",n);
 
 	}
 	else if (n == 0)
 	{
-		printf("and is 0\n");
+		printf("%d is zero\n",n);
 
 	}
-	else if ((n < 6) && (n > 0))
+	else if (n < 0)
 	{
 
-		printf("and is less than 6 and not 0\n");
+		printf("%d is negative\n",n);
 	}
 
 	return (0);
