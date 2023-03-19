@@ -17,10 +17,6 @@ int main(void)
 			{
 				for (h = k+1; h <= 9; h++)
 				{
-					if (h + k == 1)
-					{
-						h = 0;
-					}
 					putchar((i % 10) + '0');
 					putchar((j % 10) + '0');
 					putchar(' ');
@@ -30,10 +26,6 @@ int main(void)
 					{
 						putchar(',');
 						putchar(' ');
-					}
-					if (h == 0)
-					{
-						h++;
 					}
 				}
 			}
