@@ -17,7 +17,7 @@ int main(void)
 			{
 				for (h = k+1; h <= 9; h++)
 				{
-					if(h + k == 1)
+					if (h + k == 1)
 					{
 						h = 0;
 					}
@@ -30,6 +30,10 @@ int main(void)
 					{
 						putchar(',');
 						putchar(' ');
+					}
+					if (h == 0)
+					{
+						h++;
 					}
 				}
 			}
