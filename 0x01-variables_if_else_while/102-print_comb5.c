@@ -15,8 +15,12 @@ int main(void)
 		{
 			for (k = 0; k <= 9; k++)
 			{
-				for (h = k+1; h <= 9; h++)
+				for (h = k + 1; h <= 9; h++)
 				{
+					if (k > 0)
+					{
+						h = 0;
+					}
 					putchar((i % 10) + '0');
 					putchar((j % 10) + '0');
 					putchar(' ');
