@@ -7,7 +7,9 @@
 int main(void)
 {
 	char *ptchar = "_putchar";
-	for (i = 0; i <= sizeof(putchar);i++)
+	int i;
+
+	for (i = 0; i <= sizeof(putchar); i++)
 	{
 		_putchar(ptchar[i]);
 	}
