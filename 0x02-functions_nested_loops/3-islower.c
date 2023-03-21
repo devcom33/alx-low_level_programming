@@ -3,8 +3,7 @@
 /**
  * _islower - return 1 if lower
  * @c: ascci of ch
- * Return : 1 Success
- * Else : 0
+ * Return: if Success 1 else 0
  */
 int _islower(int c)
 {
