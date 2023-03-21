@@ -6,6 +6,11 @@
 
 int main(void)
 {
-	printf("_putchar\n");
+	char *ptchar = "_putchar";
+	for (i = 0; i <= sizeof(putchar);i++)
+	{
+		_putchar(ptchar[i]);
+	}
+	_putchar('\n');
 	return (0);
 }
