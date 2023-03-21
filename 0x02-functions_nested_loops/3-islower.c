@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * print_alphabet - print alphabet
- * Return - nothing
+ * _islower - return 1 if lower
+ * Return - 1 if c is lowercase else 0
  */
 int _islower(int c)
 {
