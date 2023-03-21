@@ -2,11 +2,13 @@
 #include "main.h"
 /**
  * _islower - return 1 if lower
- * Return - 1 if c is lowercase else 0
+ * @c: ascci of ch
+ * Return - 1 Success
+ * Else - 0
  */
 int _islower(int c)
 {
-	if((c >= 'a') && (c <= 'z'))
+	if ((c >= 'a') && (c <= 'z'))
 	{
 		return (1);
 	}
