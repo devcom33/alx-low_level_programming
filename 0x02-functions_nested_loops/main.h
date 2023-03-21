@@ -1,3 +1,5 @@
+#ifndef MAIN_H
+#define MAIN_H
 void print_alphabet(void)
 {
 	char i;
@@ -7,3 +9,4 @@ void print_alphabet(void)
 	}
 	putchar('\n');
 }
+#endif
