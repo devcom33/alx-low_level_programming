@@ -6,9 +6,12 @@
  * @num: number
  * Return: answer
  */
-int print_last_digit(int num)
+void print_last_digit(int num)
 {
-	putchar((num % 10) + '0');
-	putchar((num % 10) + '0');
-	return (0);
+	int res;
+
+	res = n % 10;
+	((n > 0) ? res : res = res * -1);
+	_putchar(res + '0');
+	return (res);
 }
