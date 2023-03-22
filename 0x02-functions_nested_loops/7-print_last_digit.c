@@ -3,10 +3,10 @@
 
 /**
  * print_last_digit - print last digit
- * @num: number
+ * @n: number
  * Return: answer
  */
-int print_last_digit(int num)
+int print_last_digit(int n)
 {
 	int res;
 
