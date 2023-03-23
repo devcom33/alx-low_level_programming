@@ -1,4 +1,4 @@
-#include "../0x02-functions_nested_loops/main.h"
+#include "main.h"
 
 /**
 * main - tests function that prints if integer is positive or negative
