@@ -7,6 +7,7 @@
 void jack_bauer(void)
 {
 	int i, j;
+	char *snm;
 
 	for (i = 0; i < 24; i++)
 	{
@@ -22,7 +23,7 @@ void jack_bauer(void)
 			{
 				_putchar('0');
 			}
-			puts(j);
+			Sprintf(snm, "%d", j);
 			_putchar('\n');
 		}
 	}
