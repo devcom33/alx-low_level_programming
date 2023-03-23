@@ -23,7 +23,7 @@ void jack_bauer(void)
 			{
 				_putchar('0');
 			}
-			Sprintf(snm, "%d", j);
+			sprintf(snm, "%d", j);
 			_putchar('\n');
 		}
 	}
