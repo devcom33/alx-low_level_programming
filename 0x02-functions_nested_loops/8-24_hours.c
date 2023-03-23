@@ -22,7 +22,7 @@ void jack_bauer(void)
 			{
 				_putchar('0');
 			}
-			printf("%c", (char)j);
+			puts(j);
 			_putchar('\n');
 		}
 	}
