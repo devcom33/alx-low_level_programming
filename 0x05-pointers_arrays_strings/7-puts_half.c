@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * put_half - second half of the string
+ * puts_half - second half of the string
  * @str: string argument
  */
 void puts_half(char *str)
@@ -12,6 +12,10 @@ void puts_half(char *str)
 		len++;
 	}
 	n = (len - 1) / 2;
+	if (len % 2 == 0)
+	{
+		n = n - 1;
+	}
 	for (i = n; i < len; i++)
 	{
 		_putchar(*(str + i));
