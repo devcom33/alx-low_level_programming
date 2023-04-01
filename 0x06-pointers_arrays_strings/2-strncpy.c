@@ -2,7 +2,7 @@
 /**
  * _strncpy - copy n char
  * @dest: string argument
- * @src: string argument
+ * @src: string argument for src
  * @n: integer argument
  * Return: dest
  */
