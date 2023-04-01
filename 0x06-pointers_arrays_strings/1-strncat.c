@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _strncat - This function concatenate two strings except that it will use at most n bytes from src
+ * _strncat - This function concat two str and it will use at most n bytes
  * @dest: string agument
  * @src: string argument
  * @n: number bytes from src
