@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "main.h"
 /**
  * _strchr - function that return the first occurrence of the character
