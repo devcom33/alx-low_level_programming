@@ -9,5 +9,8 @@
  */
 int main(int argc, char *argv[])
 {
-	
+	int nm1 = atoi(argv[1]);
+	char op = argv[2];
+	int nm2 = atoi(argv[2]);
+	return (get_op_func(op)(nm1, nm2));
 }
