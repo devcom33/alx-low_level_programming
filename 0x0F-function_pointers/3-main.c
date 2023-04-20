@@ -17,6 +17,8 @@ int main(int argc, char *argv[])
 	int nm1 = atoi(argv[1]);
 	char *op = argv[2];
 	int nm2 = atoi(argv[2]);
-	printf("%d\n", get_op_func(op)(nm1, nm2));
+	int (*op_func)(int, int) = get_op_func(op);
+
+	printf("%d\n", op_func(nm1, nm2));
 	return (0);
 }
