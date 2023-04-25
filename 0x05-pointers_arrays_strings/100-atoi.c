@@ -6,18 +6,19 @@
  */
 int _atoi(char *s)
 {
-	int i, result = 0, op = 1;
+	int i = 0, result = 0, op = 1;
 
-	for (i = 0; (s[i] != '-') || (s[i] != '+') || (s[i] != '\0'); i++)
+	while ((s[i] = '-') || (s[i] == '+') || (s[i] != '\0'))
 	{
 		if (s[i] == '-')
 		{
 			op *= -1;
 		}
+		i++;
 	}
 	for (; s[i] != '\0'; i++)
 	{
 		result = result * 10 + s[i] - '0';
 	}
-	return (result);
+	return (result * op);
 }
