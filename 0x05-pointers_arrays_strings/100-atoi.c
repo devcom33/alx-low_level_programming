@@ -16,11 +16,15 @@ int _atoi(char *s)
 		}
 		i++;
 	}
-	for (; s[i] != '\0' || (s[i] - '0' < 0) || (s[i] - '0' > 9); i++)
+	for (; s[i] != '\0'; i++)
 	{
 		if (((s[i] - '0' >= 0) && (s[i] - '0' <= 9)))
 		{
 			result = result * 10 + s[i] - '0';
+			if (s[i] - '0' < 0) || (s[i] - '0' > 9)
+			{
+				break;
+			}
 		}
 	}
 	return (result * op);
