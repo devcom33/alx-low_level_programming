@@ -51,14 +51,14 @@ int main(int argc, char **argv)
 		{
 			if ( (argv[i][0] - '0') != _atoi(argv[i]))
 			{
-				printf("%s", "Error");
+				printf("%s\n", "Error");
 				break;
 			}	
 			s = s + _atoi(argv[i]);
 		}
 		if (i == argc)
 		{
-			printf("%d", s);
+			printf("%d\n", s);
 		}
 	}
 	return (0);
