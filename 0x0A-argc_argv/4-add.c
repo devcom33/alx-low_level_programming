@@ -39,7 +39,7 @@ int _atoi(char *s)
  */
 int main(int argc, char **argv)
 {
-	int s = 0, i;
+	int s = 0, i, j;
 
 	if (argc == 1)
 	{
