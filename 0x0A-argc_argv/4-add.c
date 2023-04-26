@@ -51,7 +51,7 @@ int main(int argc, char **argv)
 		{
 			for (j = 0; argv[i][j] != '\0'; j++)
 			{
-				if ( (argv[i][j] - '0') != _atoi(argv[i]))
+				if ((argv[i][j] - '0' < 0) || (argv[i][j] - '0' > 9))
 				{
 					printf("%s\n", "Error");
 					break;
