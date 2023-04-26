@@ -49,10 +49,13 @@ int main(int argc, char **argv)
 	{
 		for (i = 1; i < argc; i++)
 		{
-			if ( (argv[i][0] - '0') != _atoi(argv[i]))
+			for (j = 0; argv[i][j] != '\0'; j++)
 			{
-				printf("%s\n", "Error");
-				break;
+				if ( (argv[i][j] - '0') != _atoi(argv[i]))
+				{
+					printf("%s\n", "Error");
+					break;
+				}
 			}	
 			s = s + _atoi(argv[i]);
 		}
