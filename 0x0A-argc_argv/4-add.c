@@ -39,7 +39,7 @@ int _atoi(char *s)
  */
 int main(int argc, char **argv)
 {
-	int s = 0, i, j;
+	int s = 0, c = 0, i, j;
 
 	if (argc == 1)
 	{
@@ -53,9 +53,14 @@ int main(int argc, char **argv)
 			{
 				if ((argv[i][j] - '0' < 0) || (argv[i][j] - '0' > 9))
 				{
+					c = 1;
 					printf("%s\n", "Error");
 					break;
 				}
+			}
+			if (c == 1)
+			{
+				break;
 			}
 			s = s + _atoi(argv[i]);
 		}
