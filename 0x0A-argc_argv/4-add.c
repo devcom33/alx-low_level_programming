@@ -56,7 +56,7 @@ int main(int argc, char **argv)
 					printf("%s\n", "Error");
 					break;
 				}
-			}	
+			}
 			s = s + _atoi(argv[i]);
 		}
 		if (i == argc)
