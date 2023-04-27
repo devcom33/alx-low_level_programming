@@ -1,6 +1,7 @@
-#include "main.h"
+#include "lists.h"
 /**
  * list_len - len of a LL
+ * @h: head of LL
  * Return: num of elements
  */
 size_t list_len(const list_t *h)
