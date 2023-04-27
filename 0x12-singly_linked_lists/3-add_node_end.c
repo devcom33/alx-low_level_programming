@@ -22,7 +22,7 @@ int _strlen(char *s)
  */
 list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *tmp;
+	list_t *tmp = malloc(sizeof(list_t));
 	list_t *tmp2;
 	int len = 0;
 
