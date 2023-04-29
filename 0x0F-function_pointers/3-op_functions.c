@@ -55,6 +55,7 @@ int op_mod(int a, int b)
 	if (b == 0)
 	{
 		printf("%s\n", "Error");
+		return (100);
 	}
 	return (a % b);
 }
