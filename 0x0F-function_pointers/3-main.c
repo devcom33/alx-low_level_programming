@@ -21,6 +21,11 @@ int main(int argc, char *argv[])
 	}
 	op = argv[2];
 	op_func = get_op_func(op);
+	if (op_func == NULL || op[1])
+	{
+		printf("%s\n","Error");
+		return (99);
+	}
 	nm1 = atoi(argv[1]);
 	nm2 = atoi(argv[3]);
 	if (nm2 == 0)
