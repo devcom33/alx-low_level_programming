@@ -5,8 +5,9 @@
  * main - main function
  * @argc: integer argument
  * @argv: char argument
+ * Return: 100
  */
-void main(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	int nm1;
 	char *op;
@@ -23,4 +24,5 @@ void main(int argc, char *argv[])
 	nm1 = atoi(argv[1]);
 	nm2 = atoi(argv[3]);
 	printf("%d\n", op_func(nm1, nm2));
+	return (100);
 }
