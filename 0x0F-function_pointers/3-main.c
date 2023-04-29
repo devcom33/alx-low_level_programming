@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 	op_func = get_op_func(op);
 	if (op_func == NULL || op[1])
 	{
-		printf("%s\n","Error");
+		printf("%s\n", "Error");
 		return (99);
 	}
 	nm1 = atoi(argv[1]);
