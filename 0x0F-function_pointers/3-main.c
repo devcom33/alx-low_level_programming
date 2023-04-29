@@ -23,6 +23,11 @@ int main(int argc, char *argv[])
 	op_func = get_op_func(op);
 	nm1 = atoi(argv[1]);
 	nm2 = atoi(argv[3]);
+	if (nm2 == 0)
+	{
+		printf("Error\n");
+		return (100);
+	}
 	printf("%d\n", op_func(nm1, nm2));
-	return (100);
+	return (0);
 }
