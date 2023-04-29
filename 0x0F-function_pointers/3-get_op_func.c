@@ -5,7 +5,7 @@
  * @s: string argument
  * Return: integer
  */
-int (*get_op_func(char *s))(int, int)
+int (*get_op_func(char *s))(int a, int b)
 {
 	op_t ops[] = {
 		{"+", op_add},
@@ -19,7 +19,7 @@ int (*get_op_func(char *s))(int, int)
 
 	while (i < 6)
 	{
-		if (s == ops[i].op)
+		if (*s == ops[i].op[0])
 		{
 			return (ops[i].f);
 		}
