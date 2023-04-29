@@ -1,3 +1,5 @@
+#include "function_pointers.h"
+#include <stdio.h>
 /**
  * op_add - add two arguments
  * @a: integer argument
@@ -52,7 +54,7 @@ int op_mod(int a, int b)
 {
 	if (b == 0)
 	{
-		printf("%s", Error);
+		printf("%s", "Error");
 		exit(98);
 	}
 	return (a % b);
