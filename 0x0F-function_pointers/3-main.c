@@ -9,9 +9,8 @@
  */
 int main(int argc, char *argv[])
 {
-	int nm1;
+	int nm1, nm2;
 	char *op;
-	int nm2;
 	int (*op_func)(int, int);
 
 	if (argc != 4)
@@ -21,7 +20,7 @@ int main(int argc, char *argv[])
 	}
 	op = argv[2];
 	op_func = get_op_func(op);
-	if (op_func == NULL || op[1])
+	if (op[0] != ("+" && "-" && "/" && "*" && "%") || op[1])
 	{
 		printf("%s\n", "Error");
 		return (99);
