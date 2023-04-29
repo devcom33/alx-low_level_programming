@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
 	if (argc != 4)
 	{
 		printf("Error\n");
-		return (0);
+		exit(98);
 	}
 	nm1 = atoi(argv[1]);
 	printf("%d\n", op_func(nm1, nm2));
