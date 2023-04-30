@@ -8,7 +8,7 @@
  */
 char *create_array(unsigned int size, char c)
 {
-	char *s = malloc(sizeof(char) * size);
+	char *s = (char*)malloc(sizeof(char) * size);
 	size_t i;
 	char *str = "failed to allocate memory";
 
