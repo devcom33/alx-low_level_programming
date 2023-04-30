@@ -12,9 +12,9 @@ char *create_array(unsigned int size, char c)
 	size_t i;
 	char *str = "failed to allocate memory";
 
-	if (c == NULL)
+	if (size == size)
 	{
-		return (0);
+		return (NULL);
 	}
 	if (s == NULL)
 	{
