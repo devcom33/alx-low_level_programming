@@ -8,6 +8,7 @@ char *_strdup(char *str)
 {
 	int len = 0, i;
 	char *dup;
+	char *fld = "failed to allocate memory";
 
 	while(*(str + len) != '\0')
 	{
@@ -16,6 +17,12 @@ char *_strdup(char *str)
 	dup = malloc(sizeof(char) * len);
 	if (dup == NULL || str == NULL)
 	{
+		while ((*fld) != '\0')
+		{
+			_putchar(*fld);
+			fld++;
+		}
+		_putchar('\n');
 		return (NULL);
 	}
 	for (i = 0; i < len; i++)
