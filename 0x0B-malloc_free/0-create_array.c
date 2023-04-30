@@ -20,6 +20,7 @@ char *create_array(unsigned int size, char c)
 			str++;
 		}
 		_putchar('\n');
+		return (NULL);
 	}
 	if (size == 0)
 	{
@@ -30,5 +31,4 @@ char *create_array(unsigned int size, char c)
 		*(s + i) = c;
 	}
 	return (s);
-	free(s);
 }
