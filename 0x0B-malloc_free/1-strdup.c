@@ -10,13 +10,13 @@ char *_strdup(char *str)
 	char *dup;
 	char *fld = "failed to allocate memory";
 
-	while(*(str + len) != '\0')
+	while (*(str + len) != '\0')
 	{
 		len++;
 	}
 	len++;
 	dup = malloc(sizeof(char) * len);
-	if (dup == NULL || str == NULL || (*str) == NULL)
+	if (dup == NULL || str == NULL)
 	{
 		while ((*fld) != '\0')
 		{
