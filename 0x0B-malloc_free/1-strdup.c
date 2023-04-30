@@ -8,7 +8,6 @@ char *_strdup(char *str)
 {
 	int len = 0, i;
 	char *dup;
-	char *fld = "failed to allocate memory";
 
 	while(*(str + len) != '\0')
 	{
