@@ -12,18 +12,18 @@ char *create_array(unsigned int size, char c)
 	size_t i;
 	char *str = "failed to allocate memory";
 
-	if (size == 0)
-	{
-		return (NULL);
-	}
 	if (s == NULL)
 	{
-		while((*str) != '\0')
+		while ((*str) != '\0')
 		{
 			_putchar(*str);
 			str++;
 		}
 		_putchar('\n');
+	}
+	if (size == 0)
+	{
+		return (NULL);
 	}
 	for (i = 0; i < size; i++)
 	{
