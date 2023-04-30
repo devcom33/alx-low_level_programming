@@ -12,12 +12,6 @@ char *_strdup(char *str)
 
 	if (str == NULL)
 	{
-		while ((*fld) != '\0')
-		{
-			_putchar(*fld);
-			fld++;
-		}
-		_putchar('\n');
 		return (NULL);
 	}
 	while (*(str + len) != '\0')
