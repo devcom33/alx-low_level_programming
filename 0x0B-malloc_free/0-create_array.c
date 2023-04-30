@@ -10,14 +10,20 @@ char *create_array(unsigned int size, char c)
 {
 	char *s = malloc(sizeof(char) * size);
 	size_t i;
+	char *str = "failed to allocate memory";
 
-	if (s == NULL)
+	if (c == NULL)
 	{
 		return (0);
 	}
 	if (s == NULL)
 	{
-		return (0);
+		while((*str) != '\0')
+		{
+			_putchar(*str);
+			str++;
+		}
+		_putchar('\n');
 	}
 	for (i = 0; i < size; i++)
 	{
