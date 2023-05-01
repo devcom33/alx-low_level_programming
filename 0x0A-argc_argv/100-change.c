@@ -47,6 +47,11 @@ int main(int argc, char **argv)
 		return (1);
 	}
 	mn = _atoi(argv[1]);
+	if (!mn)
+	{
+		printf("%d\n", mn);
+		return (0);
+	}
 	for (i = 0; i < 5; i++)
 	{
 		div = mn / coins[i];
