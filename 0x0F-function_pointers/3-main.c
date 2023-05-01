@@ -19,12 +19,12 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 	op = argv[2];
-	op_func = get_op_func(op);
 	if (op[1])
 	{
-		printf("%s\n", "Error");
+		printf("Error\n");
 		return (99);
 	}
+	op_func = get_op_func(op);
 	nm1 = atoi(argv[1]);
 	nm2 = atoi(argv[3]);
 	if (nm2 == 0)
