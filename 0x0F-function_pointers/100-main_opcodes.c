@@ -8,7 +8,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int bytes = atoi(argv[1]);
+	int bytes;
 	char *bt;
 	int i;
 
@@ -17,6 +17,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(1);
 	}
+	bytes = atoi(argv[1]);
 	if (bytes < 0)
 	{
 		printf("Error\n");
