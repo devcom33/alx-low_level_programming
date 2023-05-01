@@ -9,7 +9,7 @@
 int main(int argc, char *argv[])
 {
 	int bytes = atoi(argv[1]);
-	char *bt = (char *)main;
+	char *bt;
 	int i;
 
 	if (argc != 2)
@@ -22,6 +22,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(2);
 	}
+	bt = (char *)main;
 	for (i = 0; i < bytes; i++)
 	{
 		if ((bytes - 1) == i)
