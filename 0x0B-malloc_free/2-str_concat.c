@@ -19,14 +19,14 @@ char *str_concat(char *s1, char *s2)
 	{
 		return (NULL);
 	}
-	if (s1)
+	if (*s1)
 	{
 		for (i = 0; i < len1 ; i++)
 		{
 			str[i] = s1[i];
 		}
 	}
-	if (s2)
+	if (*s2)
 	{
 		for (j = 0; j < len2; j++)
 		{
