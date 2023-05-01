@@ -12,7 +12,6 @@ int main(int argc, char *argv[])
 	int nm1, nm2;
 	char *op;
 	int (*op_func)(int, int);
-
 	if (argc != 4)
 	{
 		printf("Error\n");
@@ -22,16 +21,16 @@ int main(int argc, char *argv[])
 	if (op[1])
 	{
 		printf("Error\n");
-		return (99);
+		exit(99);
 	}
 	op_func = get_op_func(op);
-	nm1 = atoi(argv[1]);
-	nm2 = atoi(argv[3]);
-	if (nm2 == 0)
+	if (!op_func)
 	{
 		printf("Error\n");
-		return (100);
+		exit(99);
 	}
+	nm1 = atoi(argv[1]);
+	nm2 = atoi(argv[3]);
 	printf("%d\n", op_func(nm1, nm2));
 	return (0);
 }
