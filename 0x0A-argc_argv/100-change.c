@@ -31,7 +31,7 @@ int _atoi(char *s)
 	return (result * op);
 }
 /**
- * main - prints the minimum number of coins 
+ * main - prints the minimum number of coins
  * @argc: argument counter
  * @argv: array of pointers to the strings
  * Return: 0
@@ -52,7 +52,7 @@ int main(int argc, char **argv)
 		div = mn / coins[i];
 		mn = mn % coins[i];
 		chng += div;
-		if(mn == 0)
+		if (mn == 0)
 			break;
 	}
 	printf("%d\n", chng);
