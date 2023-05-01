@@ -12,6 +12,7 @@ int main(int argc, char *argv[])
 	int nm1, nm2;
 	char *op;
 	int (*op_func)(int, int);
+
 	if (argc != 4)
 	{
 		printf("Error\n");
