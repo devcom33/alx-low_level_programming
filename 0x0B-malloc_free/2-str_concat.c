@@ -15,6 +15,10 @@ char *str_concat(char *s1, char *s2)
 	{
 		return (NULL);
 	}
+	while(*(s1 + len1))
+		len1++;
+	while(*(s2 + len2))
+		len2++;
 	if (s1)
 	{
 		_putchar('m');
