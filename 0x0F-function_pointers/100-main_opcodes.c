@@ -24,6 +24,8 @@ int main(int argc, char *argv[])
 	}
 	for (i = 0; i < bytes; i++)
 	{
+		if ((bytes - 1) == i)
+			printf("%02hhx\n", *(bt + i));
 		printf("%02hhx", *(bt + i));
 	}
 	return (0);
