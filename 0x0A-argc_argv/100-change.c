@@ -40,6 +40,7 @@ int main(int argc, char **argv)
 {
 	int coins[] = {25, 10, 5, 2, 1};
 	int mn, i, div = 0, chng = 0;
+
 	if (argc != 2)
 	{
 		printf("%s\n", "Error");
@@ -54,6 +55,6 @@ int main(int argc, char **argv)
 		if(mn == 0)
 			break;
 	}
-	printf("%d", chng);
+	printf("%d\n", chng);
 	return (0);
 }
