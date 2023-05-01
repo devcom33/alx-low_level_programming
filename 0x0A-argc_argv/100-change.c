@@ -49,7 +49,7 @@ int main(int argc, char **argv)
 	mn = _atoi(argv[1]);
 	if (mn < 0)
 	{
-		printf("%d\n", mn);
+		printf("%d\n", 0);
 		return (0);
 	}
 	for (i = 0; i < 5; i++)
