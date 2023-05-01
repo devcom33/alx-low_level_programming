@@ -10,6 +10,10 @@ char *str_concat(char *s1, char *s2)
 	size_t len1 = 0, len2 = 0, i, j;
 	char *str;
 
+	if (!s1)
+		*s1 = "";
+	else if (!s2)
+		*s2 = "";
 	while (s1 && *(s1 + len1))
 		len1++;
 	while (s2 && *(s2 + len2))
