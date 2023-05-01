@@ -8,7 +8,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int bytes = atoi(argv[2]);
+	int bytes = atoi(argv[1]);
 	char *bt = (char *)main;
 	int i;
 
