@@ -47,7 +47,7 @@ int main(int argc, char **argv)
 		return (1);
 	}
 	mn = _atoi(argv[1]);
-	if (!mn)
+	if (mn < 0)
 	{
 		printf("%d\n", mn);
 		return (0);
