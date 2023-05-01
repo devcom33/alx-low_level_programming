@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 /**
  * main - a program that prints the opcodes
  * @argc: number of arguments
@@ -7,8 +8,9 @@
  */
 int main(int argc, char *argv[])
 {
-	int bytes = atoi(argc[2]);
+	int bytes = atoi(argv[2]);
 	char *bt = (char *)main;
+	int i;
 
 	if (argc != 2)
 	{
