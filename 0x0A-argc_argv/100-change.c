@@ -39,14 +39,14 @@ int _atoi(char *s)
 int main(int argc, char **argv)
 {
 	int coins[] = {25, 10, 5, 2, 1};
-	int mn, div = 0, chng = 0;
+	int mn, i, div = 0, chng = 0;
 	if (argc != 2)
 	{
 		printf("%s\n", "Error");
 		return (1);
 	}
-	mn = argv[1];
-	for (i = 0; coins < 5; i++)
+	mn = _atoi(argv[1]);
+	for (i = 0; i < 5; i++)
 	{
 		div = mn / coins[i];
 		mn = mn % coins[i];
