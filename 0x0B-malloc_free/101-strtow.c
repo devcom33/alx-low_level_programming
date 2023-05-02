@@ -37,9 +37,8 @@ char **strtow(char *str)
 	nw = malloc((len + 1) * sizeof(char *));
 	if (nw == NULL || len == 0)
 		return (NULL);
-	for (i = 0; i < len; i++)
+	for (i = k = 0; i < len; i++)
 	{
-		k = i;
 		for (j = k; str[j] != '\0'; j++)
 		{
 			if (str[j] == ' ')
