@@ -31,7 +31,7 @@ char **strtow(char *str)
 	int len;
 	char **nw;
 
-	if (str == NULL || *str == "")
+	if (str == NULL || *str == '\0')
 		return (NULL);
 	len = cntword(str);
 	nw = malloc((len + 1) * sizeof(char *));
