@@ -28,7 +28,7 @@ int cntword(char *str)
  */
 char **strtow(char *str)
 {
-	int len;
+	int len, i, j, k, l;
 	char **nw;
 
 	if (str == NULL || *str == '\0')
@@ -37,5 +37,27 @@ char **strtow(char *str)
 	nw = malloc((len + 1) * sizeof(char *));
 	if (nw == NULL || len == 0)
 		return (NULL);
+	for (i = 0; i < len; i++)
+	{
+		k = i;
+		for (j = k; str[j] != '\0'; j++)
+		{
+			if (str[j] == ' ')
+				k++;
+			else if (str[j] != ' ' && (*(str + j + 1) == ' ' || *(str + j + 1) == '\0'))
+			{
+				nw[i] = malloc((j - k + 2) * sizeof(char));
+				if (nw[i] == NULL)
+				{
+					return (NULL);
+				}
+				break;
+			}
+		}
+		for (l = 0; k <= j; k++, l++)
+			nw[i][j] = str[k];
+		nw[i][j] = '\0';
+	}
+	nw[i] = NULL;
 	return (nw);
 }
