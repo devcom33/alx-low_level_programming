@@ -55,7 +55,7 @@ char **strtow(char *str)
 			}
 		}
 		for (l = 0; k <= j; k++, l++)
-			nw[i][j] = str[k];
+			nw[i][l] = str[k];
 		nw[i][j] = '\0';
 	}
 	nw[i] = NULL;
