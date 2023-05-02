@@ -57,6 +57,5 @@ char **strtow(char *str)
 			nw[i][l] = str[k];
 		nw[i][j] = '\0';
 	}
-	nw[i] = NULL;
 	return (nw);
 }
