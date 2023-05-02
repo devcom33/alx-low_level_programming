@@ -10,7 +10,7 @@ int cntword(char *str)
 
 	while (*str != '\0')
 	{
-		if (str[i] == ' ')
+		if (*str == ' ')
 			str++;
 		else
 		{
