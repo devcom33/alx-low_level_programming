@@ -8,12 +8,12 @@
 char *argstostr(int ac, char **av)
 {
 	int i;
-
+	char *c = "\n";
 	if (ac == 0 || av == NULL)
 		return (NULL);
 	for (i = 1; i < ac; i++)
 	{
-		return (av[i]);
+		return (av[i] + c);
 	}
 	return (NULL);
 }
