@@ -43,7 +43,7 @@ char **strtow(char *str)
 		{
 			if (str[j] == ' ')
 				k++;
-			else if (str[j] != ' ' && (*(str + j + 1) == ' ' || *(str + j + 1) == '\0'))
+			if (str[j] != ' ' && (*(str + j + 1) == ' ' || *(str + j + 1) == '\0'))
 			{
 				nw[i] = malloc((j - k + 2) * sizeof(char));
 				if (nw[i] == NULL)
