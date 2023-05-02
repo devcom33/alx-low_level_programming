@@ -29,9 +29,9 @@ int cntword(char *str)
 char **strtow(char *str)
 {
 	int i, j, len;
-	string **nw;
+	char **nw;
 
-	if (str == NULL || *str == "")
+	if (str == NULL || *str == '')
 		return (NULL);
 	len = cntword(str);
 	nw = malloc((len + 1) * sizeof(char *));
