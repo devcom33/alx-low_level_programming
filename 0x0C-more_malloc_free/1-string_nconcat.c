@@ -18,21 +18,16 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s1 = "";
 	if (!s2)
 		s2 = "";
-	if (s1)
+	for (i = 0; s1[i] != '\0' && i < n; i++)
 	{
-		for (i = 0; s1[i] != '\0' && i < n; i++)
-		{
-			s[i] = s1[i];
-		}
+		s[i] = s1[i];
 	}
-	if (s2)
+	for (j = 0; s2[j] != '\0' && j < n; j++)
 	{
-		for (j = 0; s2[j] != '\0' && j < n; j++)
-		{
-			s[i] = s2[j];
-			i++;
-		}
+		s[i] = s2[j];
+		i++;
 	}
 	s[i + 1] = '\0';
+	s[i + 2] = '\n';
 	return (s);
 }
