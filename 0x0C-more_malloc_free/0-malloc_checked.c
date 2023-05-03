@@ -2,6 +2,7 @@
 /**
  * malloc_checked -  that allocates memory
  * @b: size
+ * Return: a pointer
  */
 void *malloc_checked(unsigned int b)
 {
