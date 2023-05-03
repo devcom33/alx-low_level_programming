@@ -8,8 +8,8 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 {
 	unsigned int i;
 	va_list args;
+
 	va_start(args, n);
-	
 	if (!separator)
 		separator = "";
 	for (i = 0; i < n - 1; i++)
