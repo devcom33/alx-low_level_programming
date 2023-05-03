@@ -4,9 +4,9 @@
  * @s: string
  * Return: length
  */
-unsigned int _strlen(char *s)
+int _strlen(char *s)
 {
-	unsigned int i = 0;
+	int i = 0;
 
 	while (*(s + i) != '\0')
 	{
@@ -24,26 +24,25 @@ unsigned int _strlen(char *s)
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *s;
-	unsigned int i = 0, j = 0;
+	int i = 0, j = 0, nl = n;
 
-	if (_strlen(s2) <= n)
-		n = _strlen(s2);
-	s = malloc((n + _strlen(s1)) + 1);
-	if (!s)
-		return (NULL);
 	if (!s1)
 		s1 = "";
 	if (!s2)
 		s2 = "";
+	if (_strlen(s2) <= nl)
+		nl = _strlen(s2);
+	s = malloc((nl + _strlen(s1)) + 1);
+	if (!s)
+		return (NULL);
 	for (i = 0; s1[i] != '\0'; i++)
 	{
 		s[i] = s1[i];
 	}
-	for (j = 0; s2[j] != '\0' && j < n; j++)
+	for (j = 0; j < nl; j++)
 	{
-		s[i] = s2[j];
-		i++;
+		s[i + j] = s2[j];
 	}
-	s[i + 1] = '\0';
+	s[i + j] = '\0';
 	return (s);
 }
