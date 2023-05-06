@@ -23,8 +23,6 @@ unsigned int binary_to_uint(const char *b)
 {
 	unsigned int c, n = 1, k = 1, i;
 
-	if (!b)
-		return (0);
 	while (k < _strlen(b))
 	{
 		n = n * 2;
