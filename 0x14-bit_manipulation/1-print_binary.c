@@ -1,21 +1,26 @@
 #include "main.h"
-#include <stdio.h>
 /**
  * print_binary - prints the binary repre of a number
  * @n: a number
  */
 void print_binary(unsigned long int n)
 {
-	char *res = "";
-	unsigned long int c = 0;
+	unsigned long int n_ = n, c = 1;
 
-	if (n == 0)
-		printf("0");
-	while (n > 0)
+	while (n_ > 0)
 	{
-		c = n & 1;
-		res = c + '0' + res;
+		len++;
 		n = n>>1;
 	}
-	printf("%s", res);
+	len -= 1;
+	if (len > 0)
+		c = c<<len;
+	while (n > 0)
+	{
+		if (c & n)
+			_putchar('1');
+		else
+			_putchar('0');
+		n = n>>1;
+	}
 }
