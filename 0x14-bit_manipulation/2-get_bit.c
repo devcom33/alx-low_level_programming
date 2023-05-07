@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdlib.h>
 /**
  * get_bit - returns the val of a bit at a given index
  * @n: a number
@@ -10,7 +9,7 @@ int get_bit(unsigned long int n, unsigned int index)
 {
 	unsigned long int c = 0;
 
-	if (64 < index)
+	if (index > 64)
 		return (-1);
 	c = (n >> index);
 	if (c & 1)
