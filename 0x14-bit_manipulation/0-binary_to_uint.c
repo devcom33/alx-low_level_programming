@@ -34,7 +34,7 @@ unsigned int binary_to_uint(const char *b)
 	{
 		if (*b == '0' || *b == '1')
 		{
-			c = c + 2 * n * (*b - '0');
+			c = c + n * (*b - '0');
 			b++;
 			n /= 2;
 		}
