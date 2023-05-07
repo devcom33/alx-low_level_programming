@@ -21,7 +21,7 @@ unsigned int _strlen(const char *s)
  */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int c, n = 1, k = 1, i;
+	unsigned int c = 0, n = 1, k = 1, i;
 
 	if (!b)
 		return (0);
