@@ -6,14 +6,14 @@
  */
 void print_binary(unsigned long int n)
 {
-	char *res;
-	unsigned long int c;
+	char *res = "";
+	unsigned long int c = 0;
 
 	if (n == 0)
 		printf("0");
 	while (n > 0)
 	{
-		c = n & 1
+		c = n & 1;
 		res = c + '0' + res;
 		n = n>>1;
 	}
