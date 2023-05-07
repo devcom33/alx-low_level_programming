@@ -21,7 +21,7 @@ unsigned int _strlen(const char *s)
  */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int c = 0, n = 1, k = 1, i;
+	unsigned int c = 0, n = 1, k = 1;
 
 	if (!b)
 		return (0);
@@ -30,16 +30,16 @@ unsigned int binary_to_uint(const char *b)
 		n = n * 2;
 		k++;
 	}
-	for (i = 0; (*b) != '\0'; i++)
+	while (*b)
 	{
-		if (*b == '0' || *b == '1')
+		if (*b != '0' && *b != '1')
+			return (0);
+		else
 		{
 			c = c + n * (*b - '0');
 			b++;
 			n /= 2;
 		}
-		else
-			return (0);
 	}
 	return (c);
 }
