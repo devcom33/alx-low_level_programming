@@ -7,12 +7,14 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int fd = open(filename, O_RDWR);
+	int fd = open(filename, O_RDONLY);
 	ssize_t c;
+	char *buffer = (char *)filename;
 
 	if (!fd)
 		return (0);
-	c = read(fd, filename, letters);
+	while ((c = read(fd, buffer, letters)) > 0)
+		write(STDOUT_FILENO, buffer, letters);
 	close(fd);
 	return (c);
 }
