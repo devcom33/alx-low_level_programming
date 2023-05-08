@@ -8,13 +8,19 @@
 int create_file(const char *filename, char *text_content)
 {
 	int fd;
-	char *buffer = malloc(sizeof(text_content));
+	char *buffer;
 	ssize_t wr;
 
 	if (!filename)
 		return (-1);
-	fd = open(filename, O_CREAT | O_WRONLY, 0600);
+	if (access(filename, F_OK) == -1)
+		fd = open(filename, O_CREAT | O_WRONLY, 0600);
+	else
+		fd = open(filename, O_WRONLY);
 	if (fd == -1)
+		return (-1);
+	buffer = malloc(sizeof(text_content));
+	if (buffer)
 		return (-1);
 	wr = write(fd, buffer, 1);
 	if (wr < 0)
