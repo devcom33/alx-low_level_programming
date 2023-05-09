@@ -27,8 +27,22 @@ void cp_file(char *file_from, char *file_to)
 			exit(99);
 		}
 	}
-	close(ff) == -1 ? exit(100) : close(ff);
-	close(ft) == -1 ? exit(100) : close(ft);
+	if (close(ff) == -1)
+	{
+		exit(100);
+	}
+	else
+	{
+		close(ff);
+	}
+	if (close(ft) == -1)
+	{
+		exit(100);
+	}
+	else
+	{
+		close(ft);
+	}
 }
 /**
  * main - check the code
