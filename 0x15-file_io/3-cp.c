@@ -6,16 +6,38 @@ int cp_file(char *file_from, char *file_to)
 {
 	int ff, ft;
 	ssize_t wr, rd;
+	char buffer[1024];
+
 	ff = open(file_from, O_RDONLY);
 	if (!ff)
 	{
+		printf("Error: Can't read from file NAME_OF_THE_FILE\n");
 		exit(98);
-		dprintf("Error: Can't read from file NAME_OF_THE_FILE\n");
 	}
 	ft = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0644);
-
-	rd = read(ff, buffer, size);
-
-	wr = write(rd, buffer, size);
+	
+	while((rd = read(ff, buffer, 1024)) > 0)
+	{
+		wr = write(ft, buffer, rd);
+		if (wr < 0)
+		{
+			printf("Error: Can't write to NAME_OF_THE_FILE\n");
+			exit(99);
+		}
+	}
 	return (1);
+}
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(int ac, char **av)
+{
+	if (ac != 3)
+	{
+		dprintf(2, "Usage: %s filename text\n", av[0]);
+		exit(97);
+	}
+	return (0);
 }
