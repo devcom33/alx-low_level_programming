@@ -17,8 +17,8 @@ void cp_file(char *file_from, char *file_to)
 		exit(98);
 	}
 	ft = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0644);
-	
-	while((rd = read(ff, buffer, 1024)) > 0)
+
+	while ((rd = read(ff, buffer, 1024)) > 0)
 	{
 		wr = write(ft, buffer, rd);
 		if (wr < 0)
