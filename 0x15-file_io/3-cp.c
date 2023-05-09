@@ -41,5 +41,6 @@ int main(int ac, char **av)
 		dprintf(2, "Usage: %s filename text\n", av[0]);
 		exit(97);
 	}
+	cp_file(av[1], av[2]);
 	return (0);
 }
