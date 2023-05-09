@@ -1,8 +1,10 @@
 #include "main.h"
 /**
  * cp_file - copies the content of a file to another file
+ * @file_from: name of the file
+ * @file_to: file destination
  */
-int cp_file(char *file_from, char *file_to)
+void cp_file(char *file_from, char *file_to)
 {
 	int ff, ft;
 	ssize_t wr, rd;
@@ -25,11 +27,11 @@ int cp_file(char *file_from, char *file_to)
 			exit(99);
 		}
 	}
-	return (1);
 }
 /**
  * main - check the code
- *
+ * @ac: number of args
+ * @av: args
  * Return: Always 0.
  */
 int main(int ac, char **av)
