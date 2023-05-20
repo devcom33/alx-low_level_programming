@@ -7,8 +7,8 @@
  */
 int set_bit(unsigned long int *n, unsigned int index)
 {
-	int c = 1 << index;
+	unsigned long int c = 1 << index;
 
-	n = c | n;
+	(*n) = c | (*n);
 	return (1);
 }
