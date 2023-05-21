@@ -16,7 +16,7 @@ void cp_file(char *file_from, char *file_to)
 		printf("Error: Can't read from file NAME_OF_THE_FILE\n");
 		exit(98);
 	}
-	ft = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0644);
+	ft = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0664);
 
 	while ((rd = read(ff, buffer, 1024)) > 0)
 	{
