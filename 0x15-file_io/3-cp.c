@@ -21,7 +21,7 @@ void cp_file(char *file_from, char *file_to)
 	while ((rd = read(ff, buffer, 1024)) > 0)
 	{
 		wr = write(ft, buffer, rd);
-		if (wr < 0)
+		if (wr < 0 || wr != rd)
 		{
 			printf("Error: Can't write to NAME_OF_THE_FILE\n");
 			exit(99);
