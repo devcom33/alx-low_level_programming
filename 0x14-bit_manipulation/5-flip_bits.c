@@ -8,19 +8,19 @@
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	unsigned long int v = n & m;
+	unsigned long int v = n ^ m;
 	unsigned int cnt = 0;
 
-	while (v != 0)
+	while (v)
 	{
 		if ((v | 1) == v)
 		{
-			v = v>>1;
+			v = v >> 1;
 		}
 		else if ((v | 1) != v)
 		{
 			cnt++;
-			v = v>>1;
+			v = v >> 1;
 		}
 	}
 	return (cnt);
