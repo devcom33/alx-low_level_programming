@@ -13,11 +13,11 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 
 	while (v)
 	{
-		if ((v | 1) == v)
+		if ((v | 1) != v)
 		{
 			v = v >> 1;
 		}
-		else if ((v | 1) != v)
+		else if ((v | 1) == v)
 		{
 			cnt++;
 			v = v >> 1;
