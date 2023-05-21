@@ -24,6 +24,7 @@ void cp_file(char *file_from, char *file_to)
 		if (wr < 0 || wr != rd)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
+			close(ff);
 			exit(99);
 		}
 	}
