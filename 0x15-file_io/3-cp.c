@@ -13,7 +13,7 @@ void cp_file(char *file_from, char *file_to)
 	ff = open(file_from, O_RDONLY);
 	if (!ff)
 	{
-		printf("Error: Can't read from file NAME_OF_THE_FILE\n");
+		dprintf(STDERR_FILENO, "Error: Can't read from file NAME_OF_THE_FILE %s\n", file_from);
 		exit(98);
 	}
 	ft = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0664);
@@ -23,7 +23,7 @@ void cp_file(char *file_from, char *file_to)
 		wr = write(ft, buffer, rd);
 		if (wr < 0 || wr != rd)
 		{
-			printf("Error: Can't write to NAME_OF_THE_FILE\n");
+			dprintf(STDERR_FILENO, "Error: Can't write to NAME_OF_THE_FILE %s\n", file_to);
 			exit(99);
 		}
 	}
