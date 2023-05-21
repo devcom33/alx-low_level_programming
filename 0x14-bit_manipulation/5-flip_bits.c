@@ -9,16 +9,15 @@
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
 	unsigned long int v = n & m;
-	size_t i;
 	unsigned int cnt = 0;
 
 	while (v != 0)
 	{
-		if (v | 1 == v)
+		if ((v | 1) == v)
 		{
 			v = v>>1;
 		}
-		else if (v | 1 != v)
+		else if ((v | 1) != v)
 		{
 			cnt++;
 			v = v>>1;
