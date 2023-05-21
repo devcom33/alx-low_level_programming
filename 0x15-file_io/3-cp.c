@@ -54,7 +54,7 @@ int main(int ac, char **av)
 {
 	if (ac != 3)
 	{
-		dprintf(2, "Usage: %s filename text\n", av[0]);
+		dprintf(2, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 	cp_file(av[1], av[2]);
