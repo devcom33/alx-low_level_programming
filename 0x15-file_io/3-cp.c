@@ -15,7 +15,6 @@ void op_file(char *file_from, char *file_to, int ff, int ft)
 		exit(98);
 	}
 	ft = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0664);
-	(void)ft;
 }
 /**
  * cp_file - copies the content of a file to another file
@@ -28,7 +27,13 @@ void cp_file(char *file_from, char *file_to)
 	ssize_t wr, rd;
 	char buffer[1024];
 
-	op_file(file_from, file_to, ff, ft);
+	ff = open(file_from, O_RDONLY);
+	if (!ff)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
+		exit(98);
+	}
+	ft = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	while ((rd = read(ff, buffer, 1024)) > 0)
 	{
 		wr = write(ft, buffer, rd);
