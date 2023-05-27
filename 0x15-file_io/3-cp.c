@@ -17,14 +17,20 @@ void cp_file(char *file_from, char *file_to)
 		exit(98);
 	}
 	ft = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0664);
-
+	if (ft == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read to file %s\n", file_to);
+		close(ff);
+		exit(99);
+	}
 	while ((rd = read(ff, buffer, 1024)) > 0)
 	{
 		wr = write(ft, buffer, rd);
-		if (wr < 0 || wr != rd)
+		if ((wr < 0) || (wr != rd))
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
 			close(ff);
+			close(ft);
 			exit(99);
 		}
 	}
