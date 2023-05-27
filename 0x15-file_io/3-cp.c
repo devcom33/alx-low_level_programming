@@ -1,15 +1,13 @@
 #include "main.h"
 /**
- * cp_file - copies the content of a file to another file
- * @file_from: name of the file
- * @file_to: file destination
+ * op_file - open files and cheching
+ * @file_from: file_from argument
+ * @file_to: file_to argument
+ * @ff: ff arg
+ * @ft: ft arg
  */
-void cp_file(char *file_from, char *file_to)
+void op_file(char *file_from, char *file_to, int ff, int ft)
 {
-	int ff, ft;
-	ssize_t wr, rd;
-	char buffer[1024];
-
 	ff = open(file_from, O_RDONLY);
 	if (!ff)
 	{
@@ -20,9 +18,21 @@ void cp_file(char *file_from, char *file_to)
 	if (ft == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read to file %s\n", file_to);
-		close(ff);
 		exit(99);
 	}
+}
+/**
+ * cp_file - copies the content of a file to another file
+ * @file_from: name of the file
+ * @file_to: file destination
+ */
+void cp_file(char *file_from, char *file_to)
+{
+	int ff, ft;
+	ssize_t wr, rd;
+	char buffer[1024];
+
+	op_file(&file_from, &file_to, ff, ft);
 	while ((rd = read(ff, buffer, 1024)) > 0)
 	{
 		wr = write(ft, buffer, rd);
@@ -30,7 +40,6 @@ void cp_file(char *file_from, char *file_to)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
 			close(ff);
-			close(ft);
 			exit(99);
 		}
 	}
