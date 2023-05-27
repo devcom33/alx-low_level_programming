@@ -61,31 +61,29 @@ void print_type(char *ptr)
 
 void print_osabi(char *ptr)
 {
-    char osabi = ptr[7];
+	char osabi = ptr[7];
 
-    printf("  OS/ABI:                            ");
-    if (osabi == 0)
-        printf("UNIX - System V\n");
-    else if (osabi == 2)
-        printf("UNIX - NetBSD\n");
-    else if (osabi == 6)
-        printf("UNIX - Solaris\n");
-    else
-        printf("<unknown: %x>\n", osabi);
-
-    printf("  ABI Version:                       %d\n", ptr[8]);
+	printf("  OS/ABI:                            ");
+    	if (osabi == 0)
+        	printf("UNIX - System V\n");
+    	else if (osabi == 2)
+        	printf("UNIX - NetBSD\n");
+	else if (osabi == 6)
+        	printf("UNIX - Solaris\n");
+	else
+		printf("<unknown: %x>\n", osabi);
+	printf("  ABI Version:                       %d\n", ptr[8]);
 }
 
 void print_version(char *ptr)
 {
-    int version = ptr[6];
+	int version = ptr[6];
 
-    printf("  Version:                           %d", version);
+	printf("  Version:                           %d", version);
 
-    if (version == EV_CURRENT)
-        printf(" (current)");
-
-    printf("\n");
+	if (version == EV_CURRENT)
+		printf(" (current)");
+	printf("\n");
 }
 
 void print_data(char *ptr)
