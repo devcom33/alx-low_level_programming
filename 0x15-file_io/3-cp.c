@@ -60,7 +60,6 @@ void cp_file(char *file_from, char *file_to)
 	if (close(ft) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", ft);
-		exit(100);
 	}
 	else
 	{
