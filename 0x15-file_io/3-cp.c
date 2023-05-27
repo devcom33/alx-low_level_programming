@@ -28,11 +28,11 @@ void op_file(char *file_from, char *file_to, int ff, int ft)
  */
 void cp_file(char *file_from, char *file_to)
 {
-	int ff, ft;
+	int ff = 0, ft = 0;
 	ssize_t wr, rd;
 	char buffer[1024];
 
-	op_file(&file_from, &file_to, ff, ft);
+	op_file(file_from, file_to, ff, ft);
 	while ((rd = read(ff, buffer, 1024)) > 0)
 	{
 		wr = write(ft, buffer, rd);
