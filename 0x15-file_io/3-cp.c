@@ -15,11 +15,6 @@ void op_file(char *file_from, char *file_to, int ff, int ft)
 		exit(98);
 	}
 	ft = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0664);
-	if (ft == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't read to file %s\n", file_to);
-		exit(99);
-	}
 }
 /**
  * cp_file - copies the content of a file to another file
