@@ -41,24 +41,23 @@ void cp_file(char *file_from, char *file_to)
 		if ((wr < 0) || (wr != rd))
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
-			close(ff),exit(99);
+			close(ff), exit(99);
 		}
 	}
 	if (rd < 0)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from),exit(98);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
+		exit(98);
 	}
 	if (close(ff) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", ff);
 	}
 	else
-	{
 		close(ff);
-	}
 	if (close(ft) == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", ft),exit(100);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", ft), exit(100);
 	}
 	else
 	{
