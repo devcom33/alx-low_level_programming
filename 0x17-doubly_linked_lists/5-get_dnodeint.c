@@ -1,4 +1,4 @@
-#include "main.h"
+#include "lists.h"
 /**
  * get_dnodeint_at_index - returns the nth node of a dlistint_t LL
  * @head: head of the DLL
