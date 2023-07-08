@@ -8,13 +8,15 @@
 
 hash_table_t *hash_table_create(unsigned long int size)
 {
-	struct hash_table_s *table;
+	hash_table_t* table;
 	size_t i;
 
-	table = (struct hash_table_s*)malloc(sizeof(struct hash_table_s));
+	table = (hash_table_t *)malloc(sizeof(hash_table_t));
 	if (!table)
 		return (NULL);
 	table->size = size;
+
+	table->array = (hash_node_t **)malloc(sizeof(hash_node_t *) * table->size);
 	for (i = 0; i < size; i++)
 	{
 		table->array[i] = NULL;	
