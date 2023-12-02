@@ -8,7 +8,7 @@
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-
+	value = value;
 	if (key == NULL || ht == NULL)
 		return (0);
 
