@@ -24,17 +24,18 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	}
 	else
 	{
-		if (strcmp(ht->array[index]->key, key) == 0)
+		/*if (strcmp(ht->array[index]->key, key) == 0)
 		{
 			strcpy(ht->array[index]->value, value);
 			return (1);
 		}
 		else
-		{
+		{*/
 			/**
 			 * collision: if two deffrent keys have same hash
 			 */
-		}
+		node->next = ht->array[index];
+		ht->array[index] = node;
 	}
 
 	return (1);
